@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(82,86,97) !important;
+	font-family: Arial, sans-serif;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	background-color: rgb(40,46,53);
+	position: relative;
+}
+
+.logo_text {
+	font-size: 32px;
+	color: white;
+}
+
+.body_page {
+    /* padding-top: 50px; */
+	position: relative;
+}
+
+.about-text {
+    padding-top: 10px;
+	text-align: center;
+}
+
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+#tableB {
+    margin-left: -25px;
+}
+
+#cond {
+    margin: 25px 15px 15px ;
+}
