@@ -27,17 +27,29 @@ $(document).on('click', '#solve', function() {
     $('#table3').bootstrapTable({});
     $('#table4').bootstrapTable({});
 
+    data.splice(0,data.length);
     kramer_method(dataA,dataB, cnt);
-    data.splice(0,data.length);
 
+    data.splice(0,data.length);
     gausse_method(dataA,dataB, cnt);
-    data.splice(0,data.length);
 
+    data.splice(0,data.length);
     zeidel_method(dataA,dataB, cnt);
-    data.splice(0,data.length);
 
-    jacobi_method(dataA,dataB, cnt);
     data.splice(0,data.length);
+    jacobi_method(dataA,dataB, cnt);
+    if(data.length == 0){
+        $('#table1').bootstrapTable('destroy'); //Destroy bootstrap table
+        $('#table2').bootstrapTable('destroy'); //Destroy bootstrap table
+        $('#table3').bootstrapTable('destroy'); //Destroy bootstrap table
+        $('#table4').bootstrapTable('destroy'); //Destroy bootstrap table
+        $('#table1').bootstrapTable();
+        $('#table2').bootstrapTable();
+        $('#table3').bootstrapTable();
+        $('#table4').bootstrapTable();
+        $("tr.no-records-found td").text("Система не прошла проверку на сходимость!")
+    }
+
 });
 
 var data= [];

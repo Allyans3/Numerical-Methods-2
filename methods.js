@@ -97,6 +97,8 @@ function kramer_method(a, b, n) {
     // a - 2d array
     // b - 1d array
     var det  = math.det(a);
+    if(!condition(a))
+        return;
     if(det == 0) {
         console.log("Determinant is equal to zero!");
         return;
@@ -123,6 +125,8 @@ function kramer_method(a, b, n) {
 //-----------------------------------------------------------------
 
 function gausse_method(dataA,dataB,iter_item) {
+    if(!condition(dataA))
+        return;
     var m = JSON.parse(JSON.stringify(dataA));
     var n = iter_item;
     for( var i = 0; i < iter_item; i++){
